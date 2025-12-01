@@ -1,0 +1,21 @@
+<!-- /paginas/criptomonedas.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Criptomonedas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/apis.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><h1>CoinGecko</h1></header>
+  <main class="container">
+    <div class="card">
+      <input id="criptoId" type="text" class="input" placeholder="ID (ej. bitcoin)">
+      <button class="btn" onclick="buscarCripto()">Buscar</button>
+      <div id="criptoRes" style="margin-top:1rem;"></div>
+    </div>
+  </main>
+</body>
+</html>
