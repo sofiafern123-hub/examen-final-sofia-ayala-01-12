@@ -1,0 +1,49 @@
+<!-- /paginas/redsocial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Red social</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/likes.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><h1>Mini red social</h1></header>
+  <main class="container">
+    <div class="grid">
+      <article class="card">
+        <h3>Post de imagen</h3>
+        <img src="../statics/images/post1.jpg" alt="Post 1">
+        <div class="like" style="margin-top:.5rem;">
+          <button onclick="toggleLike(this, '#like1')">❤ Like</button>
+          <span id="like1">0</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Post de video</h3>
+        <video controls>
+          <source src="../statics/video/post.mp4" type="video/mp4">
+        </video>
+        <div class="like" style="margin-top:.5rem;">
+          <button onclick="toggleLike(this, '#like2')">❤ Like</button>
+          <span id="like2">0</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Post de audio</h3>
+        <audio controls>
+          <source src="../statics/audio/post.mp3" type="audio/mpeg">
+        </audio>
+        <div class="like" style="margin-top:.5rem;">
+          <button onclick="toggleLike(this, '#like3')">❤ Like</button>
+          <span id="like3">0</span>
+        </div>
+      </article>
+    </div>
+  </main>
+  <script>
+    initLikes(["like1","like2","like3"]);
+  </script>
+</body>
+</html>
