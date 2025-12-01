@@ -1,0 +1,29 @@
+<!-- /paginas/operaciones.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Operaciones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/calculos.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><h1>Operaciones matemáticas</h1></header>
+  <main class="container">
+    <div class="card">
+      <label><strong>Número A:</strong></label>
+      <input id="numA" type="number" class="input">
+      <label><strong>Número B:</strong></label>
+      <input id="numB" type="number" class="input">
+      <button class="btn" onclick="calcular()">Calcular</button>
+      <div style="margin-top:.75rem;">
+        <p><strong>Suma:</strong> <span id="resSuma">-</span></p>
+        <p><strong>Resta:</strong> <span id="resResta">-</span></p>
+        <p><strong>Multiplicación:</strong> <span id="resMultip">-</span></p>
+        <p><strong>División:</strong> <span id="resDiv">-</span></p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
