@@ -1,0 +1,46 @@
+<!-- /paginas/noticias.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Noticias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/likes.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><h1>Noticias</h1></header>
+  <main class="container">
+    <div class="grid">
+      <article class="card">
+        <h3>Noticia 1</h3>
+        <p>“Nueva plataforma educativa online revoluciona el aprendizaje en Paraguay.”</p>
+        <div class="like">
+          <button onclick="toggleLike(this, '#n1')">❤ Like</button>
+          <span id="n1">0</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Noticia 2</h3>
+        <p>“Investigadores locales desarrollan aplicación para monitorear la calidad del aire.”</p>
+        <div class="like">
+          <button onclick="toggleLike(this, '#n2')">❤ Like</button>
+          <span id="n2">0</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Noticia 3</h3>
+        <p>“Estudiantes presentan proyecto innovador de energía renovable en feria tecnológica.”</p>
+        <div class="like">
+          <button onclick="toggleLike(this, '#n3')">❤ Like</button>
+          <span id="n3">0</span>
+        </div>
+      </article>
+    </div>
+  </main>
+  <script>
+    // Inicializa contadores con persistencia localStorage
+    initLikes(["n1","n2","n3"]);
+  </script>
+</body>
+</html>
