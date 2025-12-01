@@ -1,0 +1,31 @@
+<!-- /paginas/matriculacion.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matriculación</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/formulario_matriculacion.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><h1>Formulario de matriculación</h1></header>
+  <main class="container">
+    <form id="formMat" class="card">
+      <label><strong>Nombre:</strong></label>
+      <input name="nombre" required class="input">
+      <label><strong>Apellido:</strong></label>
+      <input name="apellido" required class="input">
+      <label><strong>Documento:</strong></label>
+      <input name="doc" required class="input">
+      <label><strong>Curso:</strong></label>
+      <select name="curso" required>
+        <option value="">Seleccione</option>
+        <option>HTML</option><option>CSS</option><option>JavaScript</option>
+      </select>
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+    <div id="matRes" style="margin-top:1rem;"></div>
+  </main>
+</body>
+</html>
