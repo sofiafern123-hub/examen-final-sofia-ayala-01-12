@@ -1,0 +1,46 @@
+<!-- /paginas/comentarios.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Comentarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/likes.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><h1>Comentarios con likes</h1></header>
+  <main class="container">
+    <div class="grid">
+      <section class="card">
+        <h3>Comentario 1</h3>
+        <p>“Este proyecto me ayudó a entender mejor cómo funcionan las APIs en la práctica.”</p>
+        <div class="like">
+          <button onclick="toggleLike(this, '#c1')">❤ Like</button>
+          <span id="c1">0</span>
+        </div>
+      </section>
+      <section class="card">
+        <h3>Comentario 2</h3>
+        <p>“La galería está muy bien organizada, me gustó la forma en que se muestran las imágenes.”</p>
+        <div class="like">
+          <button onclick="toggleLike(this, '#c2')">❤ Like</button>
+          <span id="c2">0</span>
+        </div>
+      </section>
+      <section class="card">
+        <h3>Comentario 3</h3>
+        <p>“El formulario de matriculación es sencillo y fácil de usar, excelente trabajo.”</p>
+        <div class="like">
+          <button onclick="toggleLike(this, '#c3')">❤ Like</button>
+          <span id="c3">0</span>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script>
+    // Inicializa contadores con persistencia localStorage
+    initLikes(["c1","c2","c3"]);
+  </script>
+</body>
+</html>
