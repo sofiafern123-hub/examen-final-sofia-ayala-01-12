@@ -1,0 +1,21 @@
+<!-- /paginas/clima.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <script src="../js/apis.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><h1>Consulta del clima</h1></header>
+  <main class="container">
+    <div class="card">
+      <input id="ciudad" type="text" class="input" placeholder="Ciudad (ej. Asunción)">
+      <button class="btn" onclick="buscarClima()">Buscar</button>
+      <div id="resultado" style="margin-top:1rem;"></div>
+    </div>
+  </main>
+</body>
+</html>
