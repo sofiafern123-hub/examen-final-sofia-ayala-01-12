@@ -1,0 +1,38 @@
+<!-- /paginas/menu2.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <style>
+    .tabs { display:flex; gap:.5rem; flex-wrap: wrap; }
+    .tab { padding:.5rem .75rem; background:#e5e7eb; border-radius:.375rem; cursor:pointer; }
+    .tab.active { background:#2563eb; color:#fff; }
+    .tab-content { margin-top:1rem; }
+  </style>
+</head>
+<body>
+  <header class="topbar"><h1>Menú por pestañas</h1></header>
+  <main class="container">
+    <div class="tabs">
+      <div class="tab active" data-tab="t1">HTML</div>
+      <div class="tab" data-tab="t2">CSS</div>
+      <div class="tab" data-tab="t3">JS</div>
+    </div>
+    <div class="tab-content card" id="t1">Contenido HTML</div>
+    <div class="tab-content card" id="t2" style="display:none;">Contenido CSS</div>
+    <div class="tab-content card" id="t3" style="display:none;">Contenido JS</div>
+  </main>
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+      document.getElementById(tab.dataset.tab).style.display = 'block';
+    }));
+  </script>
+</body>
+</html>
