@@ -1,0 +1,106 @@
+<!-- /index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto Web Unificado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/bienvenida.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Proyecto Web Unificado</h1>
+    <div id="saludo" class="saludo"></div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <ul class="menu">
+        <li><a href="paginas/html_basico.html">HTML básico</a></li>
+        <li class="has-sub">
+          <a href="#">Banco</a>
+          <ul class="submenu">
+            <li><a href="paginas/banco_tabla.html">Tabla</a></li>
+            <li><a href="paginas/banco_miembros.html">Miembros</a></li>
+          </ul>
+        </li>
+        <li><a href="paginas/galeria.html">Galería</a></li>
+        <li><a href="paginas/operaciones.html">Operaciones</a></li>
+        <li class="has-sub">
+          <a href="#">Formularios</a>
+          <ul class="submenu">
+            <li><a href="paginas/matriculacion.html">Matriculación</a></li>
+            <li><a href="paginas/prueba.html">Prueba</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#">APIs</a>
+          <ul class="submenu">
+            <li><a href="paginas/clima.html">Clima</a></li>
+            <li><a href="paginas/paises.html">Países</a></li>
+            <li><a href="paginas/pokemon.html">Pokémon</a></li>
+            <li><a href="paginas/rick_morty.html">Rick & Morty</a></li>
+            <li><a href="paginas/criptomonedas.html">Criptomonedas</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#">Multimedia</a>
+          <ul class="submenu">
+            <li><a href="paginas/multimedia.html">Mapas</a></li>
+            <li><a href="paginas/multimedia2.html">YouTube</a></li>
+            <li><a href="paginas/multimedia3.html">Videos mp4 + audios</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#">Menús</a>
+          <ul class="submenu">
+            <li><a href="paginas/menu1.html">Menú 1</a></li>
+            <li><a href="paginas/menu2.html">Menú 2</a></li>
+            <li><a href="paginas/menu3.html">Menú 3</a></li>
+          </ul>
+        </li>
+        <li><a href="paginas/redsocial.html">Red social</a></li>
+        <li><a href="paginas/comentarios.html">Comentarios</a></li>
+        <li><a href="paginas/noticias.html">Noticias</a></li>
+        <li><a href="paginas/productos.html">Productos</a></li>
+        <li><a href="paginas/imagenes.html">Imágenes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2>Descripción general del sitio</h2>
+      <p>Este sitio reúne ejercicios de HTML, CSS y JavaScript: HTML básico, banco (tabla y miembros), galería e imágenes, operaciones matemáticas, formularios (matriculación y prueba), consumo de APIs (clima, países, Pokémon, Rick & Morty, criptomonedas), multimedia (mapas, YouTube, MP4 y audios), menús personalizados, red social, comentarios y noticias con likes.</p>
+    </section>
+    <section class="card">
+      <h3>Prueba de edad interactiva (opcional)</h3>
+      <input id="edadInput" type="number" class="input" placeholder="Ingrese su edad">
+      <button class="btn" onclick="evaluarEdad()">Evaluar</button>
+      <p id="edadOut">-</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Hecho con HTML, CSS y JS — Responsivo y accesible</small>
+  </footer>
+
+  <script src="js/edad.js"></script>
+  <script>
+    // Toggle y submenús en móvil
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+    document.querySelectorAll('.has-sub > a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        if (window.innerWidth <= 840) {
+          e.preventDefault();
+          a.parentElement.classList.toggle('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
