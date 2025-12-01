@@ -1,0 +1,38 @@
+<!-- /paginas/menu3.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <style>
+    .mega { position:relative; display:inline-block; }
+    .mega > a { background:#334155; color:#fff; padding:.5rem .75rem; border-radius:.375rem; text-decoration:none; }
+    .mega-panel { display:none; position:absolute; background:#fff; border:1px solid #e5e7eb; padding:1rem; border-radius:.5rem; width:600px; top:2.5rem; left:0; }
+    .mega:hover .mega-panel { display:block; }
+    .mega-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+    .mega-item { padding:.5rem; background:#f8fafc; border-radius:.375rem; }
+  </style>
+</head>
+<body>
+  <header class="topbar"><h1>Menú mega</h1></header>
+  <main class="container">
+    <nav>
+      <div class="mega">
+        <a href="#">Recursos</a>
+        <div class="mega-panel">
+          <div class="mega-grid">
+            <div class="mega-item"><a href="galeria.html">Galería</a></div>
+            <div class="mega-item"><a href="clima.html">Clima</a></div>
+            <div class="mega-item"><a href="paises.html">Países</a></div>
+            <div class="mega-item"><a href="pokemon.html">Pokémon</a></div>
+            <div class="mega-item"><a href="rick_morty.html">Rick & Morty</a></div>
+            <div class="mega-item"><a href="criptomonedas.html">Criptomonedas</a></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </main>
+</body>
+</html>
